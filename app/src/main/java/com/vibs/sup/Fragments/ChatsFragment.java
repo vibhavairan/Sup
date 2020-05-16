@@ -89,7 +89,7 @@ public class ChatsFragment extends Fragment {
                     User user = snapshot.getValue(User.class);
                     //Display user from chats
                     for (String id : usersList){
-                        if(user.getId().equals(id)){
+                        if(user.getId().equals(id)&&!mUsers.contains(user)){
                             if(mUsers.size() != 0){
                                 for (User user1 : mUsers){
                                     if(!user.getId().equals(user1.getId())){
